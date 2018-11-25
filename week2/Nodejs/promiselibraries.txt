@@ -1,0 +1,22 @@
+BlueBird: Bluebird is a fully-featured Promise library forJavaScript. The strongest feature of Bluebird is that it allows you to 
+"promisify" other Node modules in order to use them asynchronously. Promisify is a concept applied to callback functions.Bluebird 
+still includes a lot of features like cancellation, iteration methods and warnings that native promises don't.
+
+Catiline: In this case, we don't need to create a worker…as an external file.…It creates embedded web workers.…And for that we need 
+to create a worker…with level cw function.…That means Catiline worker.…And we need to send a function as an argument.…That function 
+will receive data as a first argument…and a callback function as a second argument.…And then we need to send messages…to that worker 
+with the data function.…So worker. data.…We send the message.…That message will be received as data…as the first argument in the function.…
+
+jQuery:		Classic library for DOM-manipulation across browsers. It makes things like HTML document traversal and manipulation, event 
+handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers.
+
+Q:  Well known implementation ,a light edition of it can be found in the popular angularJS  framework from Google.Q promises provide 
+a fail shorthand for then when you are only interested in handling the error.
+
+Kew :   this  is a lightweight promise framework with an aim of providing a base set of functionality similar to that provided by 
+the Q library.
+
+Deffered:	small Gist style implementation. Simply Deferred is now feature complete. Bug fixes will be made, but no API 
+changes are expected unless they're to ensure compliance with the jQuery API.
+
+Yui:		Yahoo’s library for DOM-manipulation across browsers

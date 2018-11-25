@@ -1,0 +1,33 @@
+Bluebird:
+var Promise=require('bluebird');//Declaration or importing.
+  var promisereadfile=Promise.promisify(require("fs").readFile);
+  promisereadfile("file1.js","utf8")
+  .then(function(fileText){
+     console.log(fileText);
+   }).catch(function(err){
+    console.log("error to be displayed",err);
+})
+});
+
+Q promise:
+var Q = require('q');
+	 
+var d= Q.defer();
+var prom = d.promise;
+ 
+prom.then(function (val) {
+   console.log('Got : '+val);
+});
+
+prom.catch(function(err){
+   console.error("Error : "+err)
+})
+ 
+d.resolve('success');
+d.reject(`something went wrong`);
+
+
+ES6:
+var Promise = require('es6-promise-polyfill').Promise;
+var promise = newPromise(...);
+

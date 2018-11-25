@@ -1,0 +1,55 @@
+npm is the package manager for JavaScript. Open-source developers use npm to share software. npm is also a software Package Manager 
+and Installer.
+
+To install:	npm install <package_name>
+
+Following are the some packages:
+
+	Express: Node.js framework for quickly creating and publishing applications, and APIs.
+  
+	Async: Higher-order functions and common patterns for asynchronous code.
+  
+	Forever: A simple CLI tool for ensuring that a given node script runs continuosly.
+  
+	Grunt: It is a Javascript task runner.
+  
+	Browserify: It bundleups all the .js code recursively.It mainly provide require() method for clientside functions.
+  
+	chalk: Terminal string styling done right.
+  
+	Bluebird: Full featured Promises/A+ implementation with exceptionally good performance.
+  
+	Slug: Slugifies even utf-8 chars.
+  
+	Morgan: HTTP request logger middleware for node.js.
+  
+	Request: Simplified HTTP Client: Apps constantly have to deal with external HTTP calls, whether to fetch data, or to load data 
+ directly from an external source. 
+ 
+  Socket.IO: Socket lets you build truly real-time communication apps that would require real-time streams of content, whether directly
+from the data that you are working with. Examples like apps like Twitter bot for collecting latest tweets, a Facebook bot for watching 
+news, and other interesting combinations of APIs that work with data in real-time. 
+
+  BOWER: To keep track of all libraries, tools, frameworks and other js utilities can turn into a strenuous task, there is
+so much to control and keep in check.
+
+  MongoDB: This library will provide a necessary driver for those who wish to implement a full version of MongoDB within their Node.js 
+projects. 
+
+  Gulp: is a streaming build system that helps you automate painful or time-consuming tasks in your development workflow.
+  
+  Moment: A lightweight JavaScript date library for parsing, validating, manipulating, and formatting dates.
+  
+  Validator: A nodejs module for a library of string validators and sanitizers.
+  
+  Optimist: is a node.js library for option parsing with an argv hash.
+  
+  Through: It enables simplified stream construction. It is easy way to create a stream that is both readable and writable..
+  
+  Passport: A simple, unobtrusive authentication middleware for Node.js. Passport uses the strategies to authenticate requests.
+  
+  Strategies can range from verifying username and password credentials or authentication using OAuth or OpenID.
+  
+  Mongoose: It is a MongoDB object modeling tool designed to work in an asynchronous environment.
+  
+  Pug:Formerly known as Jade (although still using old website), Pug is a node templating engine.

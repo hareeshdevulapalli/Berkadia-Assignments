@@ -1,0 +1,14 @@
+Nodejs modules are like library functions in javascript and these can be included into our application.In module system, each file 
+is treated as a separate module. If we want to use a module we need to use require() in the .js before actually utilizing the modules.
+We have three types of modules:
+1.coremodules: http, url, querystring, path, fs, util.
+2.Local modules:created locally on application.
+Syntax: var m=require(“module_name”);
+3.Third party modules
+
+Some Builtin moules are:
+	
+Async: Async is a utility module which provides straight-forward, powerful functions for working with asynchronous JavaScript.
+Http-server: is a simple, zero-configuration command-line http server. It is powerful enough for production usage, but it's simple 
+and hackable enough to be used for testing, local development, and learning.
+Timers: To execute a function after a given number of milliseconds

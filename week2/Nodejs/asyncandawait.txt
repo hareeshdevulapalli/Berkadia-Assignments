@@ -1,0 +1,16 @@
+ASYNC: Asynchronous requests will wait for a timer to finish or a request to respond while the rest of the code continues to execute.
+This function always returns a promise.
+AWAIT: Used in async functions
+	
+async function f() {
+	
+	  let promise = new Promise((resolve, reject) => {
+	    setTimeout(() => resolve("done!"), 1000)
+	  });
+	
+	  let result = await promise; // wait till the promise resolves (*)
+	
+	  alert(result); // "done!"
+	}
+	
+	f();

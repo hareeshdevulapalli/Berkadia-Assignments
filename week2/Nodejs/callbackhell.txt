@@ -1,0 +1,10 @@
+Debugging/reading a functions becomes complex due to the Implementation of callback functions within a callback functions is known as 
+callback Hell. Sometimes this makes us to face stack overflow condition in eventloop.
+Example:
+getPerson(person => {
+   getPlanet(person, (planet) => {
+       getGalaxy(planet, (galaxy) => {
+           console.log(galaxy);
+       });
+   });
+});
