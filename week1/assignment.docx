@@ -1,0 +1,213 @@
+1.What are http method? Differentiate each method.
+
+ANS:   In Html we have total 8 types of methods which have their unique operations to perform.
+1.GET    =  Request to get info/data from the server.
+                    If multiple times called then it creates cache. which will help us in faster recovery 
+                    of data by not requesting to the server.
+                    It gets the total contents of file.
+2.POST   =  For creating the contents into the server this request is called.
+                    If this method is called many times then it will create duplicates in the server.
+3.PUT    =  This method is called when we want to update the existing content.not to create new content.
+4.DELETE =  This deletes contents or data from server even if it exists or not.
+5.HEAD   =  Same as GET, but it gets the info about headres and recent logins but not the whole contents of file. 
+It's like getting an refenence.
+6.CONNECT=  Connecting the server(local host) to the client.
+7.OPTIONS=  It requests for the options/methods/requests which can be allowed by the respective server.
+8.TRACE  =  echo the contents of requests.It is mainly used database debugging,testing and so on.
+
+2.What are the different http response codes?
+
+ANS: When a search engine or website visitor makes a request to a web server, a three digit HTTP Response Status Code is returned.
+HTTP Response is the packet of information sent by Server to the Client in response to an earlier Request made by Client. 
+HTTP Response contains the information requested by the Client. ... Just like HTTP Request, 
+HTTP Response also has the same structure: Status Line.
+We have 5 types of response codes(And every first digit in XXX represent type of response):
+1_ _   = Informational response (these codes are kind of acknowledgement to the client.)
+	 100(continue) - client can continue sending the remaining request.
+         101(Switching) - Switching the communication protocol during the transaction.
+	 102(processing) - The purpose of this code is to avoid timeout errors at client side by informing the client that the server 
+	 has received the request and processing it. 
+	 103(earlyhints) – Before http requests,server sends early hint for the client browser that the server not yet started 
+	 processing the requests.
+2_ _ = Success response codes
+	200(ok) – Required webpage/content is delivered.
+	201(created) - creating a new resource based on the received request.
+	202(accepted) - When the server accepted the request from the client but not yet processed then the code “202 – Accepted” is 
+	returned.
+	203(non-authorative info) - When the server processed the request successfully but returns the information from another 
+	resource to the requested client then the code “203 – Non authoritative Information” is received.
+	204(no content) - The server could not able to find any content for the received request.
+	205(Reset content) - The request was processed successfully by the server but no content is returned. The difference here 
+	is that 205 code informs the client to reset the document view.
+	206(partial content) - Server returns this code when it sends part of the requested resource due to the range mentioned 
+	in the request header. For example, the client may request a range of file to download and use multiple streams to download 
+	the complete content.
+3 _ _ = Redirection.
+	300 – multiple choices
+	301 – resource moved permanently
+	302 – resource moved temporarily
+	303 – see another resource
+	304 – resource not modified
+	305 – Use proxy
+	307 – temporary edirection
+	306 & 308 codes.
+
+4_ _ = client error responses(some are listed below):
+	400(invalid request) - The webserver cannot fulfill the received request because of incorrect syntax and sends a code 
+	“400 - Bad Request” in a response.
+ 	401(unauthorized) - webpage authenticated by a user id and password typically for a registered user. Code “401 – Unauthorized” 
+	is received when a user try to access the authenticated resource.
+	408(request timeout) - Server should receive the request from client within the specified time. If the client did not 
+	send the complete request within the specified time then the server responds with the timeout error.
+5 _ _ = server errors(5xx error codes are returned by the web server when it encounters a problem during processing of the requested 
+resource by the client.)
+	500(Internal server error) - When the server encountered an unexpected condition which stops it from responding to the
+	request .
+	502(Gateway error) - When a request prompts the server1 to act as a gateway or proxy to get a response from another
+	server2 and if the server1 received an unacceptable response from the server2.
+	503(service unavailable) - When a request is received by the server at the time it is overloaded by other requests or 
+	it is under planned maintenance downtime. 
+	
+3.What is idempotency?
+
+ANS:     If behavior of any method does not change even if it is performed multiple times is considered to be idempotent in nature.
+For instance, GET  PUT DELETE are idempotent and POST requests are non-idempotent.
+consider the following lines..
+	k=2;
+	k=2;
+	k=2;
+The above three lines do not change the value of 'K' even if it is performed 100 more times.
+GET can request the server for information/data as many times as it can. Because of this there wont be any data manipulation .
+This does happens
+PUT and DELETE requests.
+But, when it comes to POST if one POST-request is called too many times then it creates duplicates into the server.
+
+4.What is content delivery network?
+
+ANS:        It is collection of servers or computers which will provide a static content to the user when client requests content 
+from main server which is in busy in providing responses to many users. (OR)A content delivery network is a system of distributed 
+servers that deliver pages like CSS,images and other web content to a client based on the geographic locations of the client, 
+the origin of webpage and the content delivery server.
+It mainly decreases the load/traffic caused to the web server and increases the speed of delivering the content to the client because 
+of accessing through the nearest geographic location based CDN.
+And the main server delivers dynamic contents and give the task of delivering static content to CDN’s.
+For instance, these are some companies which provide CDN services are AKAMAI, Amazon cloudfront, CDNify.
+
+6.What is meant by MEAN stack and MERN stack?
+ANS:  MEAN stack:
+		The term MEAN stack refers to a collection of JavaScript based technologies used to develop web applications.
+		MEAN is an acronym for MongoDB,ExpressJS,AngularJS and NodeJS.From client to server to database ,MEAN is full 
+		stack JavaScript.
+	The MERN stack is just a bunch of technologies bundled together, but there’s nothing seamless about it. 
+Angular is a front end Javascript framework whereas React is simply a JavaScript library.
+
+7.Advantages that compiled languages bring over interpreted languages?
+
+ANS:	The difference between an interpreted and a compiled language lies in the result of the process of interpreting or compiling. 
+An interpreter produces a result from a program, while a compiler produces a program written in assembly language.
+	Interpreted languages, in contrast, must be parsed, interpreted, and executed each time the program is run, thereby greatly 
+	adding to the cost of running the program. For this reason, interpreted programs are usually less efficient than compiled
+	programs.
+	Assembler, COBOL, PL/I, C/C++ are all translated by running the source code through a compiler. This results in very efficient 
+code that can be executed any number of times. The overhead for the translation is incurred just once, when the source is compiled,
+thereafter, it need only be loaded and executed.
+	However, with an interpreted language you can do things that cannot be done in a compiled language. For example, 
+interpreted programs can modify themselves by adding or changing functions at runtime. It is also usually easier to develop applications
+in an interpreted environment because you don't have to recompile your application each time you want to test a small section.
+
+8.Time and space complexities?
+
+ANS:	Time complexity: time complexity is the computational complexity that describes the amount of time it takes to run an algorithm.
+Time complexity is commonly estimated by counting the number of elementary operations performed by the algorithm, supposing that each 
+elementary operation takes a fixed amount of time to perform. Calculated using O(oh),omega and tita notations.
+	Space complexity: Space Complexity of an algorithm is total space taken by the algorithm with respect to the input size. Space 
+complexity includes both Auxiliary space and space used by input. Auxiliary Space is the extra space or temporary space used by an 
+algorithm.
+
+9.What are the types of Data structures?
+
+ANS:	1.Primitive data structures:
+			A.Integer
+			B.Float
+			C.char and
+			D.Pointers
+		2.Non-primitive data structures:
+			A.Linear:
+				a.Arrays
+				b.Stacks
+				c.Queues
+				d.LinkedLists
+			B.Non-Linear:
+				a.Trees and
+				b.Graphs.
+10.Why NodeJS?
+
+ANS:	Node.js is a packaged compilation of Google’s V8 JavaScript engine, the libuv platform abstraction layer, and a core library, 
+which is itself primarily written in JavaScript.useful to create real-time websites with push capability. Node.js shines in real-time 
+web applications employing push technology over websockets. 
+	The main idea of Node.js is to use non-blocking, event-driven I/O to remain lightweight and efficient in the face of 
+data-intensive real-time applications that run across distributed devices. 
+Compared to traditional web-serving techniques where each connection (request) spawns a new thread, taking up system RAM and eventually 
+maxing-out at the amount of RAM available, Node.js operates on a single-thread, using non-blocking I/O calls, allowing it to support 
+tens of thousands of concurrent connections held in the event loop.
+
+11.Single thread and multi thread?
+
+ANS:	Thread of execution is the smallest sequence of programmed instructions that can be managed independently by a scheduler, which 
+is typically a part of the operating system.
+An application can be single thread iff single line going from the entry point of the application to its end.
+ 	Multi-threaded: multithreading is the ability of a central processing unit (CPU) (or a single core in a multi-core processor) to 
+ execute multiple processes or threads concurrently, supported by the operating system.For instance imagine a tree: the whole app 
+ starts from 1 point, than it branches out more and more.
+ 
+12.What is multi processing and multi threading?
+
+ANS:	Multiprocessing is adding more number of or CPUs/processors to the system which increases the computing speed of the system. 
+Multiple processes are executed concurrently. Creation of a process is time-consuming and resource intensive.Multiprocessing can be 
+symmetric or asymmetric. In symmetric multiprocessing, all processors are free to run any process in a system. In Asymmetric 
+multiprocessing, there is a master-slave relationship among the processors. The master processor is responsible for allotting the 
+process to slave processors.
+	Multithreading is allowing a process to create more threads which increase the responsiveness of the system. Multiple 
+threads of a single process are executed concurrently. Creation of a thread is economical in both sense time and resource. 
+Threads belonging to the same process has to share the belongings of that process like code, data, and system resources. Creating 
+separate processes for each service request consumes time and exhaust system resources. Instead of incurring this overhead, it is more 
+efficient to create threads of a process.
+
+13.Difference between synchronous and asynchronous programming?
+
+ANS: In synchronous programming, each step is performed one after the previous one is finished executing.
+	 In asynchronous, step 2 will be performed even if step 1 isn't finished.  It never waits for each operation to complete, 
+rather it executes all operations in the first GO only. The result of each operation will be handled once the result is available. 
+14.Which supports both synchronous and ansynchronous?
+
+ANS:	XMLHttpRequest supports both synchronous and asynchronous communications. In general, however, asynchronous requests should 
+be preferred to synchronous requests for performance reasons..
+
+15.What is event loop?
+
+ANS:	JavaScript has a single call stack in which it keeps track of what function we’re currently executing and what function is to 
+be executed after that. Every time you call a setTimeout function or you do some async operation — it is added to the Event Table. This 
+is a data structure which knows that a certain function should be triggered after a certain event. Once that event occurs (timeout, 
+click, mouse move) it sends a notice. Event Table does not execute functions and does not add them to the call stack on it’s own. 
+It’s sole purpose is to keep track of events and send them to the Event Queue.
+	Event loop runs process from callback queue to stack to browser API’s.
+	
+16.What is libuv ?
+
+ANS:	libuv is a library that allows your JavaScript code (via V8) to perform I/O, whether it is network, file etc. So from TCP level 
+connectivity all the way to file/system ops are actually performed by the libuv library. libuv is a asynchronous IO library, it has 
+high efficient event loop, also has separate solution for io blocking operation, it could has internal worker thread pool for io
+blocking operation. So it achieves great performance through combining both asynchronous event loop and thread pool for non-io blocking
+and io blocking operation.
+
+17.What is V8 engine?
+
+ANS:	V8 was designed to increase the performance of the JavaScript execution inside web browsers. In order to obtain speed, V8 
+translates JavaScript code into more efficient machine code instead of using an interpreter. It compiles JavaScript code into machine 
+code at execution by implementing a JIT (Just-In-Time) compiler. The main difference with V8 is that it doesn’t produce bytecode or 
+any intermediate code.It contains Heap and stack memory and Browse API’s ,call back stack and event loop which increases efficiency.
+
+18.What do you mean by Non blocking io?
+
+ANS:	IO operations are performed independent of other system operations. Your system won’t let you to go into wait state, rather
+it can perform other operations which are independent of required IO.
