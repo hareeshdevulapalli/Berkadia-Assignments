@@ -1,0 +1,20 @@
+Nginx:
+	Nginx is a web server which can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache.
+	Reverse Proxy:A reverse proxy is a type of proxy server that retrieves resources on behalf of a client 
+from one or more servers.
+	Load Balancer:Load balancing improves distribution of workload among several computing resources.
+	HTTP cache:A web cache/HTTP cache is an information technology for the temporary storage of web documents, 
+such as HTML pages and images, to reduce server lag. 
+	A web cache system stores copies of documents passing through it. 
+	The subsequent requests may be satisfied from the cache if certain conditions are met.
+	Igor Sysoev began development of Nginx in 2002 to solve C10k problem.
+	C10K problem:The C10k problem is the problem of optimising network sockets to handle a large number of clients 
+at the same time.[1] The name C10k is a numeronym for concurrently handling ten thousand connections.Nginx was written 
+with an explicit goal of outperforming the Apache web server.
+
+Apache:
+	Apache generally uses PHP as a scripting language, which has been around forever, is stable, and has a lot of support. 
+If you're going to use a CMS like Wordpress, Drupal, or Joomla or really anything PHP-related, you're much better off going with 
+Apache.As of August 2018, it was estimated to serve 39% of all active websites and 35% of the top million websites.
+	Apache supports a variety of features, many implemented as compiled modules which extend the core functionality.Virtual 
+hosting allows one Apache installation to serve many different Web sites.

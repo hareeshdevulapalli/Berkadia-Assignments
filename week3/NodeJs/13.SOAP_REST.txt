@@ -1,0 +1,39 @@
+	SOAP (Simple Object Access Protocol) and REST (Representational State Transfer) are two kinds of web services that have been around for 
+a while.SOAP was more of a standards-based protocol and was suited for long term business processes. Then came REST, which claimed to deal the issues 
+with SOAP. It offered a higher degree of flexibility than SOAP, and in certain conditions it provided simple methods to access web services. Both of 
+them relied on a well-established set of rules that were considered as standards in the interest of data exchange.
+
+SOAP:
+-->SOAP is a “Simple Object Access Protocol” and has standards specified.
+-->The packaging defines:
+	All Objects supported by the service methods.
+	Methods from the services and end point.
+	Security and other extensions.
+	All definitions in XML.
+-->A call state can be maintained across multiple calls.
+-->It has well-defined standards across security, messaging, and transport. Since it's over HTTP, all security features like SSL are part of it.
+-->Often you might face issues around cross-language import as it might work with .NET but not with Java or Salesforce Apex.
+-->SOAP utilizes greater bandwidth to communicate metadata.
+-->Has standards around error handling.
+-->It requires less plumbing code for developers to code in the application layer as there are many tools to convert the 
+“Web Services Definition Language” aka wsdl (an XML file) into code in many programming languages.
+-->It has comparatively slower operating speed due to overhead of running a SOAP WebService container.
+-->Examples: Paypal SOAP API, Salesforce SOAP API.
+
+REST:
+-->REST is not protocol, rather a way of calling Web calls over HTTP using XML or JSON.
+-->REST by default is stateless.
+	No standards for defining objects.
+	Security is managed through OAuth or Basic Authentication.
+	Unless the provider is using YAML, RAML or Swagger, method definitions and input/output structures cannot be programmatically interpreted. 
+   Usually these are supported through online documentation.
+-->Normally these are stateless (but you could manage states if you like).
+-->OAuth and Basic Auth most commonly used for security authentication. Other standards not as well defined. Builds on top of HTTP protocol—GET,
+POST, DELETE, etc. Transport security is usually SSL.
+-->Easy to use as it's a simple HTTP protocol with JSON or XML structures in GET and POST. Great for using with Javascript, AJAX, and jQuery.
+-->REST uses comparatively lesser bandwidth.
+-->Error handling and response are decided by the developer of the API.
+-->It requires comparatively more plumbing code in terms of transaction, security, and coordination.
+If you have YAML, RAML, or Swagger, then you can use tools to automatically create code for many programming languages including those for mobile devices.
+-->Usually REST offers rapid operating speed without the need of extensive processing.
+-->Examples: Youtube API, Twitter API, Pinterest API, LinkedIn API.
