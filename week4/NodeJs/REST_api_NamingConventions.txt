@@ -1,0 +1,64 @@
+REST API Naming conventions:
+	REST states that URL's must be discoverable through links, like links in normal (HTML) web pages. It has no strict rules.it uses 
+Uniform Resource Identifiers (URIs) to address resources. REST API designers should create URIs that convey a REST API’s resource model 
+to its potential client developers. 
+	When resources are named well, an API is intuitive and easy to use.If done poorly, that same API can feel difficult to use and understand.
+
+-->Terminologies:
+	Resource:Resource is an object or representation of something, which has some associated data with it and there can be set of methods to operate on it. 
+		we perform add,update,delete on these resources.
+	Collections:collection is a set of resources.
+		ex:list of college names is a collection of colleges.
+	URL:Uniform Resource Locator is a path through which a resource can be located and some actions can be performed on it.
+
+-->API endpoint:
+	Each API endpoint should perform different operation.
+	URL contains only nouns but not verb(which specify the action it is performing).
+
+-->HTTP methods are used as verbs like :
+	GET- to get all the related resources.
+	POST- to create a resource.
+	PUT- to update a resource.
+	DELETE- to content in a resource.
+EX: GET/colleges/college/students //will return the list of students in the college.
+The paths should contain the plural form of resources and the HTTP method should define the kind of action to be performed on the resource.
+
+-->HTTP response status codes:
+	When the client raises a request to the server through an API, the client should know the feedback, whether it failed, passed or the request was wrong. 
+	The server should always return the right status code.HTTP response status codes are classified into 5 classes.The first digit of code will define 
+the class of the information.
+		 1XX (Informational responses): It indicates that the request was received and understood.
+			100 -- continue
+			101 -- switching protocols
+		2XX (Success responses): It indicates that the request was received,understood and accepted.
+			200 -- Ok
+			201 -- Created
+			202 -- Accepted
+			203 -- Non-Authoriative Information
+ 		3XX (Redirection): It indicates that the client must take additional action to complete the request.
+			300 -- Multiple Choices
+			301 -- Moved Permanently
+			302 -- Found
+		4XX (Client Errors): It indicates that the errors are caused due to client.
+			400 -- Bad Request
+			401 -- Unauthorized
+			402 -- Payment Required
+			403 -- Forbidden
+			404 -- Not Found
+		5xx (Server Errors): It indicates that the server has failed to provide response to the client.
+			500 Internal Server Error
+			501 Not Implemented
+			502 Bad Gateway
+-->Field naming casing conention:
+	 one is free to use any naming convention.If the request body or response type is JSON then follow camelCase to maintain the consistency.
+
+-->Searching, sorting, filtering and pagination:
+	All of these actions are simply the query on one dataset.There will be no new set of APIs to handle these actions. We need to append the 
+query params with the GET method API.
+		Sorting:Used for sorting the results.
+			ex:GET/Collegenames/college/students?sort=marks_asc  //sorts the students based on marks obtained by student.
+		Filtering:Used to eliminate unnecessary information by filtering them.
+			ex:GET/Collegenames/college/students?location=Hyderabad  //eliminates students from other locations apart from hyderabad.
+		Pagination:When the dataset is too large, we divide the data set into smaller chunks, which helps in improving the performance 
+and is easier to handle the response.
+			ex:GET/Collegename/page=10  //displays 10 collegenames per page

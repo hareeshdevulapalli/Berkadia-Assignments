@@ -1,0 +1,30 @@
+	A Denial of Service (DoS) attack is different from a DDoS attack. The DoS attack typically uses one computer and one Internet connection to 
+flood a targeted system or resource. The DDoS attack uses multiple computers and Internet connections to flood the targeted resource. DDoS attacks 
+are often global attacks, distributed via botnets.	
+	DDoS is short for Distributed Denial of Service. DDoS is a type of DOS attack where multiple compromised systems, 
+which are often infected with a Trojan, are used to target a single system causing a Denial of Service (DoS) attack. Victims 
+of a DDoS attack consist of both the end targeted system and all systems maliciously used and controlled by the hacker in the distributed attack.
+In a DDoS attack, the incoming traffic flooding the victim originates from many different sources – potentially hundreds of thousands 
+or more. This effectively makes it impossible to stop the attack simply by blocking a single IP address; plus, it is very difficult 
+to distinguish legitimate user traffic from attack traffic when spread across so many points of origin.
+	There are many types of DDoS attacks. Common attacks include the following:
+	Traffic attacks:
+		Traffic flooding attacks send a huge volume of TCP, UDP and ICPM packets to the target. Legitimate requests get lost 
+and these attacks may be accompanied by malware exploitation.
+	Bandwidth attacks:
+		This DDoS attack overloads the target with massive amounts of junk data. This results in a loss of network bandwidth 
+and equipment resources and can lead to a complete denial of service.
+	Application attacks:
+		Application-layer data messages can deplete resources in the application layer, leaving the target's system services unavailable.
+Examples:
+	Ransomware:Cyber criminals threaten to launch a DDoS attack on an organization’s site unless the organization pays a ransom fee of $XXX in Bitcoin,
+or Cyber criminals infect machines in a network with crypto-ransomware that encrypts all files, then demand a ransom fee to unlock the files.
+	Smruf Attack:The Smurf attack is a distributed denial-of-service attack in which large numbers of Internet Control Message Protocol (ICMP) 
+packets with the intended victim's spoofed source IP are broadcast to a computer network using an IP broadcast address. Computers will respond to 
+this by sending a reply to the source IP address.The victim's computer will be flooded with traffic.It  can slow down the performance of victim's computer.
+	Fraggle Attack:It works very similarly to the Smurf attack in that many computers on the network will respond to this traffic by 
+sending traffic back to the spoofed source IP of the victim, flooding it with traffic.
+	SYN Flodding Attack:It is a form of denial-of-service attack in which an attacker sends a succession of SYN requests to a target's system 
+in an attempt to consume enough server resources to make the system unresponsive to legitimate traffic.
+
+

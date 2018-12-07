@@ -1,0 +1,52 @@
+1. Express.js :
+	Express is a web application framework for Node.js, released as free and open-source software under the MIT License. 
+	It is designed for building web applications and APIs.
+	It has been called the de facto standard server framework for Node.js.
+	Express is the backend component of the MEAN stack, together with the MongoDB database software and AngularJS frontend framework.
+
+2. Koa.js :
+	Koa.js is a telescoping call stack that allows adding new features to the call. You can customize the code as per 
+the requirement. To improve readability of the application koa.js uses generators for middle ware flow control and to efficiently 
+deal with call backs. The use of generators eliminates all the callback complexities by enhancing error handling capacity.
+
+3. Total.js :
+	Total.js Total.js is a MVC framework for building responsive web apps using HTML, CSS, and Java script. This NodeJS framework 
+works well with front-end frameworks such as AngularJS, ReactJS, Ember, Bootstrap, and Backbone.js. It is compatible with database, such 
+as MongoDB, CouchDB, SQLite, PostgreSQL, and MYSQL.
+
+4. Flatiron :
+	Flatiron is yet another Node.js MVC web application framework. What sets Flatiron apart from other frameworks is its package-based approach. 
+Since it gives the power and freedom to decide how much or how little the framework should include, developers can pick and choose the packages they want to
+work with and include with their project. 
+	It handles a lot of the basic data management responsibilities and CRUD for you by supplying a powerful ODM that takescare of a lot of the heavy lifting.
+
+5. Mojito :
+	Mojito is a JavaScript framework based on Yahoo! Cocktails, a mobile application development platform introduced by Yahoo! Developer Network.
+
+6. Meteor :
+	Meteor is an open-source, model-view controller (MVC) framework for building websites and web/mobile applications. 
+	The framework supports OS X, Windows, and Linux. It allows writing both client and server parts of an application in JavaScript. 
+	Meteor's inbuilt set of pre-written, self-contained modules makes writing application codes. Moreover, its reactive programming model allows 
+creating applications using lesser JavaScript code. Besides, Meteor is a powerful framework for building real-time applications. Popular applications 
+built using Meteor are Respondly (a team collaboration app), Blonk (Job search mobile App) and more.
+
+7. Hapi :
+	A rich framework for building applications and services.
+	Hapi enables developers to focus on writing reusable application logic instead of spending time building infrastructure.
+	hapi is a simple to use configuration-centric framework with built-in support for input validation, caching, authentication, and other 
+essential facilities for building web and services applications.
+
+8. Locomotive :
+	Locomotive is a Node JS framework for building web applications. With its significant support to MVC patterns and REST principles ,it enable 
+developers to build well-architected applications. 
+	
+9. Sails.js :
+	Sails.js is another MVC microframework that’s great for data-heavy enterprise-grade apps, and it’s built off of Express.js. 
+	It’s used for HTTP requests, with some Ruby on Rails-inspired magic. 
+	Its MVC pattern is based on Express and Socket.IO and is ideal for writing data-oriented applications and real-time features like 
+a chat application. 
+	It’s also compatible with a ton of front-end frameworks, like AngularJS. Where it differs (and shines) is its API structure, automatically
+generating RESTful JSON models with support for websockets and HTTP.
+
+10. Derby :
+	Derby is a model-view controller (MVC) JavaScript framework for both client-side and server-side. 
