@@ -17,9 +17,13 @@ export class AppComponent {
   public k:any={
     tp:0,tc:0
   };
-  public gettotalproducts(data:any) :void{
+  public addtotalproducts(data:any) :void{
       this.k.tp=this.k.tp+1;
       this.k.tc=this.k.tc+data.tc;
   }
+  public removetotalproducts(data:any) :void{
+    this.k.tp=this.k.tp-1;
+    this.k.tc=this.k.tc-data.tc;
+}
   
 }
