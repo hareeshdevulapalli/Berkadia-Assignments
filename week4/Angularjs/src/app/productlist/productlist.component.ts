@@ -11,13 +11,20 @@ export class ProductlistComponent implements OnInit {
 
   @Input('name') plname:String;
   @Input('price') plprice:number;
-  @Output() totalproducts: EventEmitter<any>=new EventEmitter();
+  @Output() add: EventEmitter<any>=new EventEmitter();
+  @Output() remove: EventEmitter<any>=new EventEmitter();
   
-  public sendtotalproducts(){
+  public addtotalproducts(){
     let total:any={
       tc:this.plprice
     };
-    this.totalproducts.emit(total);
+    this.add.emit(total);
+  }
+  public removetotalproducts(){
+    let total:any={
+      tc:this.plprice
+    };
+    this.remove.emit(total);
   }
 
   ngOnInit() {
