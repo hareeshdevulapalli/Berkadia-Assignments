@@ -22,8 +22,10 @@ export class AppComponent {
       this.k.tc=this.k.tc+data.tc;
   }
   public removetotalproducts(data:any) :void{
-    this.k.tp=this.k.tp-1;
-    this.k.tc=this.k.tc-data.tc;
+    if(this.k.tp>0){
+      this.k.tp=this.k.tp-1;
+      this.k.tc=this.k.tc-data.tc;
+    }
 }
   
 }
