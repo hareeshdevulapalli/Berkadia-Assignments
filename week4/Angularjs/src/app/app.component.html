@@ -13,7 +13,7 @@
     <hr><hr>
 </div>
 <productlist 
-[name]='i.pname' [price]='i.price' (totalproducts)='gettotalproducts($event)'
+[name]='i.pname' [price]='i.price' (add)='addtotalproducts($event)' (remove)='removetotalproducts($event)'
 *ngFor='let i of plist'></productlist>
 <hr>
 <router-outlet></router-outlet>
