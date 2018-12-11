@@ -1,0 +1,50 @@
+.container{
+    margin:auto;
+    width:50%;
+}
+h1{
+    text-align: center;
+    font-family: Arial;
+    color : rgb(233, 114, 44);
+}
+ 
+  button:hover {
+    background-color: #008CBA;
+    color: white;
+  }
+
+  table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+    font-size: 18px;
+  }
+  
+  table td, table th {
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+  
+  
+  table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: rgb(223, 110, 45);
+    color: white;
+    font-size: 25px;
+  }
+
+  .od{
+      background-color:violet;
+  }
+
+  .ev{
+    background-color:  rgb(131, 20, 112);
+}
+.fc{
+    background-color:  rgb(64, 173, 31);
+}
+.lc{
+    background-color:  rgb(160, 182, 34);
+}

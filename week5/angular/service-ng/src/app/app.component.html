@@ -1,0 +1,89 @@
+<div class="container">
+  <h1>Displaying Student data<span color="green">(using *ngFor and ngClass(first, last,odd,even) )</span></h1>
+  <table>
+      <tr>
+          <th>S.No</th>
+          <th>STUDENTNAME</th>
+          <th>DEPARTMENT</th>
+          <th>AGE</th>
+          <th>PERCENTAGE</th>
+        </tr>
+    <tr *ngFor="let d of students;let i = index; let e = even; let o = odd;let f = first; let l = last"
+        [ngClass]="{ fc: f, lc: l,od: o, ev: e }">
+      <td>{{i+1}}</td>
+      <td>{{d.name}}</td>
+      <td>{{d.dept}}</td>
+      <td>{{d.age}}</td>
+      <td>{{d.percen}}</td>
+    </tr>
+  </table>
+<p [ngStyle]="{'font-size':'25px','color':'green'}" >click below buttons to get respective values
+        (ngStyle is assigned to this text)</p>
+  <div align="center">Displaying students data using switch case</div>
+  <div class="btn-group btn-group-lg" align="center">
+  <button (click)="value='cse'" >CSE</button> 
+  <button (click)="value='ece'">ECE</button> 
+  <button (click)="value='mech'">MECHNICAL</button> 
+  <button (click)="value='civ'">CIVIL</button> 
+  <button (click)="value='eee'">EEE</button> </div>
+  <div [ngSwitch] = "value" align="center">
+      <div *ngSwitchCase="'cse'">
+          <table>
+              <tr  *ngFor="let d of scse">
+                  <td>{{d.name}}</td>
+                  <td>{{d.dept}}</td>
+                  <td>{{d.age}}</td>
+                  <td>{{d.percen}}</td>
+              </tr>
+            </table>
+      </div>
+      <div *ngSwitchCase="'ece'">
+              <table>
+                  <tr  *ngFor="let d of sece">
+                      <td>{{d.name}}</td>
+                      <td>{{d.dept}}</td>
+                      <td>{{d.age}}</td>
+                      <td>{{d.percen}}</td>
+                  </tr>
+                </table>
+      </div>
+      <div *ngSwitchCase="'mech'">
+              <table>
+                  <tr  *ngFor="let d of smech">
+                      <td>{{d.name}}</td>
+                      <td>{{d.dept}}</td>
+                      <td>{{d.age}}</td>
+                      <td>{{d.percen}}</td>
+                  </tr>
+                </table>
+      </div>
+      <div *ngSwitchCase="'civ'">
+          <table>
+              <tr  *ngFor="let d of sciv">
+                  <td>{{d.name}}</td>
+                  <td>{{d.dept}}</td>
+                  <td>{{d.age}}</td>
+                  <td>{{d.percen}}</td>
+              </tr>
+            </table>
+      </div>
+      <div *ngSwitchCase="'eee'">
+          <table>
+              <tr  *ngFor="let d of seee">
+                  <td>{{d.name}}</td>
+                  <td>{{d.dept}}</td>
+                  <td>{{d.age}}</td>
+                  <td>{{d.percen}}</td>
+              </tr>
+            </table>
+      </div>
+      <div align="center" *ngSwitchDefault><font size="6" color="red">Warning:You need to click a button</font></div>
+    </div>
+    
+  <h3>Using ngIF</h3>
+<div [hidden]= " visible===false" style="background-color:rgb(161, 9, 123)">This will be displayed and DOM will be created</div>
+<div [hidden]= " visible===true" style="background-color:plum">This will not be displayed but DOM will be created</div>
+<div *ngIf=" visible===true" style="background-color:aquamarine">This will be displayed by ngIf and DOM created</div>
+<div *ngIf="visible===false" style="background-color:rgb(55, 0, 255)">This will not be displayed but DOM will not be created</div>
+</div><br><br>
+  
