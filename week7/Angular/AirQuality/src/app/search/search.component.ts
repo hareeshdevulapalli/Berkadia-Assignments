@@ -8,22 +8,22 @@ import { Router } from '@angular/router'
 })
 export class SearchComponent implements OnInit {
   public cityname;
-  public c;
-  ld;
-  cityairq;
-  locationd;
+  public cities;
+  locations;
+  citylocationdetails;
+  locationdetails;
   constructor(private readonly cityservice:AqService,private router: Router) { }
 
   ngOnInit() {}
   citydetails():any{
-    this.c=this.cityservice.getCityDetails(this.cityname).subscribe((res:any)=>{
-      this.cityairq=res.results;
+    this.cities=this.cityservice.getCityDetails(this.cityname).subscribe((res:any)=>{
+    this.citylocationdetails=res.results;
   });
   }
   getlocationdetails(d):any{
-    this.ld=this.cityservice.getLocationd(d).subscribe((res:any)=>{
-    this.locationd=res.results[0];
-    console.log(this.locationd);
+    this.locations=this.cityservice.getLocationd(d).subscribe((res:any)=>{
+    this.locationdetails=res.results[0];
+    console.log(this.locationdetails);
   });
   }
 
