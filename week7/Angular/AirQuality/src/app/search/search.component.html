@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://bootswatch.com/journal/">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://getbootstrap.com/docs/4.1/components/buttons/">
+<div class="split left">
+  <h3>Enter City name to get Locations data:</h3>
+<div align="center"><input type="text" [(ngModel)]="cityname" id="rcorners2">   <button (click)="citydetails()" class="btn btn-danger">Search</button></div>
+  <div *ngIf="c" class="dropdown">
+    Click below button to get available locations data:<br>
+    <div class="btn-group dropright">
+      <button class="btn btn-secondary dropdown-toggle" aria-haspopup="true" aria-expanded="false" 
+      type="button" data-toggle="dropdown"><font color="orange">{{cityname}}</font> area list</button>
+      <table class="dropdown-menu">
+      <tr *ngFor="let i of cityairq">
+        <td><button (click)="getlocationdetails(i.location)" class="btn btn-secondary btn-sm btn-block">{{i.location}}</button></td>
+      </tr>
+      </table>
+    </div>
+  </div>
+</div>
+<div *ngIf="ld" class="split right">
+  <div align="split right">
+    <font size="5">Displaying <font color="yellow">{{locationd.location}}</font> airQuality details:</font><br>
+    <table class="table table-active">
+      <thead>
+        <th>Parameter</th>
+        <th>value Unit</th>
+        <th>lastUpdated</th>
+        <th>SouceName</th>
+      </thead>
+      <tbody>
+      <tr *ngFor="let g of locationd?.measurements">
+        <td>{{g.parameter}}</td>
+        <td>{{g.value}} {{g.unit}}</td>
+        <td>{{g.lastUpdated}}</td>
+        <td>{{g.sourceName}}</td>
+      </tr></tbody>
+    </table>
+  </div>
+</div>
