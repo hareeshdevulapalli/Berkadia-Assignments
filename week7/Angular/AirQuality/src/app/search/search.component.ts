@@ -10,6 +10,7 @@ export class SearchComponent implements OnInit {
   public cityname;
   public cities;
   locations;
+  locationname;
   citylocationdetails;
   locationdetails;
   constructor(private readonly cityservice:AqService,private router: Router) { }
@@ -21,6 +22,7 @@ export class SearchComponent implements OnInit {
   });
   }
   getlocationdetails(d):any{
+    this.locationname=d;
     this.locations=this.cityservice.getLocationd(d).subscribe((res:any)=>{
     this.locationdetails=res.results[0];
     console.log(this.locationdetails);
