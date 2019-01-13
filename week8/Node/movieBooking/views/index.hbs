@@ -1,0 +1,33 @@
+<div align="center">
+    <div class="row">
+        <div class="column">
+           <form action="/theatresByPincode" method="get">
+                <div>
+                    <br><br><label><font color="orange">Enter PINCODE:</font></label><br><br>
+                    <input type="number" id="input" name="pincode"><br><br>
+                </div>
+                <button type="submit" class="button orange">GetDetails</button>
+            </form> 
+        </div>
+        <div class="column">
+            <form action="/theatresByCinema" method="get">
+                <div>
+                    <br><br><label><font color="white">Enter Movie name:</font></label><br><br>
+                    <input type="text" id="input" name="movie"><br><br>
+                </div>
+                <button type="submit" class="button blue">GetDetails</button>
+            </form>
+        </div>
+        <div class="column">
+            <form action="/theatresList" method="get">
+                <div>
+                    <br><br><label><font color="green">Click here to get all theatres</font></label><br><br>
+                </div>
+                <button type="submit" class="button">GetDetails</button><br><br><br><br>
+            </form>
+        </div>
+    </div>
+    <br><br><pre><font color="yellow">Inorder to book a movie tickets :
+    you need to enter movieNAME,theatreNAME and PINCODE</font>
+    <font color="red">Do you want to book a movie:</font><a href="/bookingTicket">clickhere</a></pre>
+</div>

@@ -1,0 +1,27 @@
+<div align="center">
+    <div><font color="yellow">Displaying current shows of movieName:{{m}},theatreName:{{t}},pincode:{{p}}</font></div>
+    <table id="t01">
+            <tr>
+                <th>Time</th>
+                <th>availableTickets</th>
+                <th>totalTickets</th>
+            </tr>
+         {{# each items}}
+            {{# each this.shows}}
+                <tr>
+                    <td>{{this.showTiming}}</td>
+                    <td>{{this.availableTickets}}</td>
+                    <td>{{this.totalTickets}}</td>
+                </tr>
+            {{/each}}
+        {{/each}}
+    </table>
+    <form action="/bookingTicket2" method="post">
+                <div>
+                    <br><br><label><font color="orange">Enter showTiming:</font></label><br><br>
+                    <input type="text" id="input" name="showTime"><br><br>
+                </div>
+                <button type="submit" class="button blue">BookTicket</button>
+    </form> 
+    <a href="/">goto home</a><br><br>
+</div>

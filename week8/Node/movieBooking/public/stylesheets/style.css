@@ -1,0 +1,149 @@
+body {
+  background-image: url("../images/movie.jpg");
+  margin: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #cccccc;
+  height: 500px;
+  position: relative;
+}
+#input {
+  border-radius: 5px;
+  background: url("../images/paper.jpg");
+  background-position: left top;
+  background-repeat: repeat;
+  padding: 20px; 
+  width: 200px;
+  height: 15px;  
+}
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.blue {background-color: #008CBA;} /* Blue */
+.orange {background-color: #e96710;} /* Red */
+/*TABLE*/
+table {
+  width:100%;
+}
+table, th, td {
+  border: 5px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 7px;
+  text-align: left;
+}
+table#t01 tr:nth-child(even) {
+  background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+ background-color: #fff;
+}
+table#t01 th {
+  background-color: black;
+  color: white;
+}
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+
+a:hover, a:active {
+  background-color: red;
+}
+* {
+  box-sizing: border-box;
+}
+
+ol {
+  background: #aa258d;
+  padding: 10px;
+}
+
+ul {
+  background: #084581;
+  padding: 10px;
+}
+
+ol li {
+  background: #ffe5e5;
+  padding: 5px;
+  margin-left: 5px;
+}
+
+ul li {
+  background: #a0af1a;
+  margin: 5px;
+}
+
+/* Style the header */
+.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}
+.column1{
+  float: left;
+  width: 25%;
+  padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}

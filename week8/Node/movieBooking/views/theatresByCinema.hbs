@@ -1,0 +1,36 @@
+<div align="center">
+    <pre><font color="yellow">Inorder to book a movie tickets :
+    you need to enter movieNAME,theatreNAME and PINCODE</font>
+    <font color="red">Do you want to book a movie:</font><a href="/bookingTicket">clickhere</a></pre>
+    <a href="/">goto home</a><br><br>
+    <font color="green" size="5">Displaying "<font color="red">{{mv}}</font>" theatres</font>
+    <table id="t01">
+        <tr>
+            <th>TheatreName</th>
+            <th>ShowTimings</th>
+            <th>location</th>
+            <th>pincode</th>
+        </tr>
+    {{# each items}}
+    <tr>
+        <td>{{ this.theatreName }}</td>
+        <td><table>
+            <tr>
+                <th>Time</th>
+                <th>availableTickets</th>
+                <th>totalTickets</th>
+            </tr>
+            {{# each this.shows}}
+                <tr>
+                    <td>{{this.showTiming}}</td>
+                    <td>{{this.availableTickets}}</td>
+                    <td>{{this.totalTickets}}</td>
+                </tr>
+            {{/each}}
+        </table></td>
+            <td>{{ this.location }}</td>
+            <td>{{ this.pincode}}</td>
+    </tr>
+    {{/each}}
+    </table>
+</div>
