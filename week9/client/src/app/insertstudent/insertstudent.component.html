@@ -1,0 +1,11 @@
+<div align="center">
+    <font color="red" size="6">Enter Sid,sname,sage,enrolledcourse and department to insert into database:</font>
+    <div>
+      <font color="black" size="5"> ID:</font>           <input type="text" [(ngModel)]="sid" id="rcorners2" value="sid"><br>
+      <font color="black" size="5"> NAME:</font><input type="text" [(ngModel)]="sname" id="rcorners2" value="sname"><br>
+      <font color="black" size="5"> AGE:          </font><input type="number" [(ngModel)]="sage" id="rcorners2" value="sage"><br>
+      <font color="black" size="5"> Enroll COurse:</font><input type="text" [(ngModel)]="enrolledcourse" id="rcorners2" value="enrolledcourse"><br>
+      <font color="black" size="5"> DEPT:        </font> <input type="text" [(ngModel)]="department" id="rcorners2" value="department"><br>
+     <button (click)="insert()" class="btn btn-danger">Insert</button>
+    </div>
+</div>

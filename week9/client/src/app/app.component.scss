@@ -1,0 +1,82 @@
+
+  .split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 20;
+    overflow-x: hidden;
+    padding-top: 10px;
+  }
+  .left {
+    left: 0;
+  }
+  .right {
+    right: 0;
+  }
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
+  .button1 {
+    background-color: rgb(176, 216, 30); 
+    color: rgb(204, 16, 16); 
+    border: 2px solid #4CAF50;
+  }
+  
+  .button2 {
+    background-color: rgb(100, 73, 94); 
+    color: rgb(23, 233, 58); 
+    border: 2px solid #008CBA;
+  }
+  .button3{
+    background-color: rgb(61, 168, 159); 
+    color: rgb(17, 1, 1); 
+    border: 2px solid #4CAF50;
+  }
+  
+  .button4 {
+    background-color: rgb(233, 96, 5); 
+    color: rgb(20, 32, 145); 
+    border: 2px solid #008CBA;
+  }
+  .column {
+    float: left;
+    width: 50%;
+    padding: 15px;
+  }
+  .column1{
+    float: left;
+    width: 25%;
+    padding: 15px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media screen and (max-width:600px) {
+    .column {
+      width: 100%;
+    }
+  }

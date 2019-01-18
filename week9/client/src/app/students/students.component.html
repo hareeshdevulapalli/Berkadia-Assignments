@@ -1,0 +1,25 @@
+<div align="center">
+    <font color="green" size="6">Displaying "STUDENT" details</font>
+    <table class="table table-dark "> 
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>age</th>
+        <th>course</th>
+        <th>dept</th>
+      </tr>
+    </thead>
+  <tbody>
+    <tr *ngFor="let i of students" >
+      <td>{{i.sid}}</td>
+      <td>{{i.sname}}</td>
+      <td>{{i.sage}}</td>
+      <td>{{i.enrolledcourse}}</td>
+      <td>{{i.department}}</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
