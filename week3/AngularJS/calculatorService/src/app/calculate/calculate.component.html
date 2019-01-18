@@ -1,0 +1,17 @@
+<div align="center">
+        <h1>CALCULATOR</h1>
+  <h3>Enter expression(*):<input type="text" [(ngModel)]="expression" ><br></h3>
+  <h3>Enter Precision:<input  type="number" [(ngModel)]="precision" ><br><br></h3>
+  <button class="button button1" (click)="result()">calculate</button><br>
+  <div *ngIf="c">
+      <h2>Result is :<font color="green">{{value}}</font></h2>
+  </div>
+  <div>
+    <p>
+        <font color="red">Note:</font><br>
+          (a).  3+6         ->> 3%2B6<br>
+          (b).  2+3*sqrt(4) ->> 2%2B3*sqrt(4)  
+    </p>
+    
+  </div>
+</div>
