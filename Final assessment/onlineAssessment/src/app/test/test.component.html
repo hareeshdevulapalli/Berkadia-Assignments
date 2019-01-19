@@ -1,0 +1,21 @@
+<div align="center">
+  <div *ngFor="let q of questions;let i=index">
+    <div *ngIf="i==id">
+        <div>{{q.question}}</div>
+            <div class="radio">
+              <label><input type="radio" name="optradio" [(ngModel)]='result' [value]='q.correct_answer' onClick="document.getElementById('subutton').disabled = false" />{{q.correct_answer}}</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="optradio" [(ngModel)]='result' [value]='q.incorrect_answers[0]' onClick="document.getElementById('subutton').disabled = false" />{{q.incorrect_answers[0]}}</label>
+            </div>
+            <div class="radio">
+                <label><input type="radio" name="optradio" [(ngModel)]='result' [value]='q.incorrect_answers[1]' onClick="document.getElementById('subutton').disabled = false" />{{q.incorrect_answers[1]}}</label>
+              </div>
+              <div class="radio">
+                  <label><input type="radio" name="optradio" [(ngModel)]='result' [value]='q.incorrect_answers[2]' onClick="document.getElementById('subutton').disabled = false" />{{q.incorrect_answers[2]}}</label>
+                </div>
+              <button id="subutton" type="submit" value="valj" (click)="nextquestion(result,q.correct_answer)" disabled>submit</button>
+          
+          </div>
+  </div>
+</div>

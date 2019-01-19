@@ -1,0 +1,12 @@
+<div align="center">
+  Total Score : <div>{{s}}</div>
+  <button (click)="getScore()">score</button><br>
+  <div align="center">
+  
+    <div *ngFor="let q of attempted;let i=index">
+        {{q.question}}<br>
+       Your anser: {{displayanswered[i]?.ans}} <br>
+      Correct Anser:  {{displaycorrect[i]?.ans}}<br>
+     
+  </div>
+</div>
